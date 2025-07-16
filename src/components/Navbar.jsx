@@ -43,7 +43,7 @@ const Navbar = () => {
         </RainbowButton>
       </nav>
       <div className="z-51 rounded-lg">
-        <ScrollProgress className="top-[65px]" />
+        <ScrollProgress className="top-[60px]" />
       </div>
     </header>
   );
