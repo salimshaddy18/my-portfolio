@@ -34,7 +34,7 @@ const Navbar = () => {
         </div>
         <RainbowButton>
           <a
-            href="/assets/resume.pdf"
+            href="/assets/Tushar_Baskheti_FullstackResume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
