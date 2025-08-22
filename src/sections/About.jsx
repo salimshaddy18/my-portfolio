@@ -8,41 +8,41 @@ const About = () => {
   const skills = [
     {
       category: "Frontend",
-      items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      items: ["React.js", "HTML", "CSS", "Tailwind CSS"],
       icon: Globe,
     },
     {
       category: "Backend",
-      items: ["Node.js", "Express", "Next.js", "MongoDB"],
+      items: ["Node.js", "Express.js", "MongoDB"],
       icon: Database,
     },
     {
       category: "Languages",
-      items: ["JavaScript", "C", "C++", "Java", "Python"],
+      items: ["C++", "Java", "JavaScript"],
       icon: Code,
     },
   ];
 
   const techSlugs = [
+    "c++",
     "typescript",
     "javascript",
     "java",
     "react",
     "html5",
     "css3",
+    "tailwindcss",
     "nodedotjs",
     "express",
-    "nextdotjs",
+    "mongodb",
     "firebase",
     "vercel",
-    "testinglibrary",
-    "docker",
+    "render",
     "git",
     "github",
-    "gitlab",
     "visualstudiocode",
-    "androidstudio",
-    "figma",
+    "postman",
+    "canva",
   ];
 
   const techImages = techSlugs.map(
@@ -50,7 +50,10 @@ const About = () => {
   );
 
   return (
-    <section id="about" className="relative bg-black text-white">
+    <section
+      id="about"
+      className="relative bg-black text-white overflow-x-hidden"
+    >
       <div className="max-w-7xl mx-auto py-20 px-6">
         <div className="text-center mb-12">
           <h2 className="flex justify-center items-center text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -59,7 +62,7 @@ const About = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* LEFT SIDE */}
           <div className="space-y-4">
             {/* Text Block */}
@@ -76,20 +79,20 @@ const About = () => {
               </p>
             </div>
 
-            {/* IconCloud below text with tight spacing */}
-            <div className="flex justify-start  -mt-2">
-              <div className="relative h-[12rem] sm:h-[14rem] md:h-[16rem] w-[90%] sm:w-[85%] md:w-[80%]">
+            {/* IconCloud*/}
+            <div className="flex justify-start -mt-2">
+              <div className="relative h-[12rem] sm:h-[14rem] md:h-[16rem] w-full max-w-sm hidden sm:block">
                 <IconCloud images={techImages} />
               </div>
             </div>
           </div>
 
-          {/* RIGHT SIDE – Skill Cards */}
-          <div className="space-y-6">
+          {/* Skill Cards */}
+          <div className="space-y-6 w-full max-w-md mx-auto">
             {skills.map((skill) => (
               <Card
                 key={skill.category}
-                className="bg-[#121212] border-none rounded-2xl shadow-md"
+                className="bg-[#121212] border-none rounded-2xl shadow-md w-full"
               >
                 <CardContent className="px-5 py-6">
                   <div className="flex items-center mb-4 gap-x-3">
