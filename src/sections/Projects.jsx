@@ -5,7 +5,6 @@ import {
   Card,
   CardHeader,
   CardContent,
-  CardFooter,
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
@@ -16,8 +15,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { FaGithub } from "react-icons/fa";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { FolderOpen } from "lucide-react";
 
 const Projects = () => {
@@ -38,12 +36,12 @@ const Projects = () => {
           </p>
         </div>
         <TooltipProvider>
-          <div className="flex justify-center items-start w-full">
-            <div className="grid grid-cols-1 gap-8 md:gap-10">
+          <div className="flex justify-center w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
               {projects.map((project, index) => (
                 <Card
                   key={index}
-                  className="bg-[#18181b]/80 border-none shadow-2xl rounded-2xl transition-transform duration-300 hover:scale-[1.025] hover:shadow-blue-700/30 backdrop-blur-md w-full max-w-md mx-auto font-sans"
+                  className="bg-[#18181b]/80 border-none shadow-2xl rounded-2xl transition-transform duration-300 hover:scale-[1.025] hover:shadow-blue-700/30 backdrop-blur-md w-full max-w-md font-sans"
                 >
                   <CardHeader className="pb-2 flex flex-row items-center justify-between gap-2 font-sans">
                     <CardTitle className="text-2xl font-semibold font-sans text-white">
